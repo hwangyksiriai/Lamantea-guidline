@@ -26,8 +26,8 @@
       --cream: #FAF8F3;
       --warm-white: #F3F0E6;
       --text-dark: #26261E;
-      --text-mid: #66624F;
-      --text-light: #A6A08A;
+      --text-mid: #57533F;
+      --text-light: #827C64;
       --border: #E3DDCC;
       --tag-bg: #EFEBDD;
       --on-brand: #FFFFFF;
@@ -278,26 +278,6 @@
     .key-msg-text { font-size: 13px; color: var(--on-brand); line-height: 1.7; }
     .key-msg-text strong { color: var(--on-brand-accent); }
 
-    /* TARGET (모집 기준) */
-    .target-box {
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px 22px;
-      margin-bottom: 20px;
-    }
-    .target-title { font-size: 12px; font-weight: 700; color: var(--brand-text); letter-spacing: 0.05em; margin-bottom: 12px; }
-    .target-row {
-      display: flex;
-      gap: 12px;
-      font-size: 13px;
-      padding: 8px 0;
-      border-bottom: 1px dashed var(--border);
-      line-height: 1.6;
-    }
-    .target-row:last-child { border-bottom: none; padding-bottom: 0; }
-    .target-key { min-width: 64px; flex-shrink: 0; color: var(--text-light); font-size: 12px; padding-top: 1px; }
-    .target-val { color: var(--text-dark); font-weight: 500; }
 
     /* PRODUCT */
     .product-box {
@@ -691,7 +671,15 @@
       -webkit-tap-highlight-color: transparent;
     }
     .hashtag:active { opacity: 0.6; }
-    .hashtag::after { content: '⎘'; font-size: 11px; color: rgba(255,255,255,0.55); }
+    .hashtag::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: currentColor;
+      opacity: 0.55;
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='8' y='8' width='14' height='14' rx='2'/%3E%3Cpath d='M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2'/%3E%3C/svg%3E") center / contain no-repeat;
+              mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='8' y='8' width='14' height='14' rx='2'/%3E%3Cpath d='M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2'/%3E%3C/svg%3E") center / contain no-repeat;
+    }
     .hashtag.ad { background: var(--text-dark); border-color: var(--text-dark); }
     .copy-all-btn {
       display: inline-flex;
@@ -893,38 +881,201 @@
     .must-item > div, .info-row, .ref-note, .warning-box { text-wrap: pretty; }
     .section-title, .hero-title, .concept-name { text-wrap: balance; }
 
+    /* ─────────────────────────────────────────────
+       READABILITY — 본문 최소 14px, 보조 텍스트 최소 12.5px, 대비 강화
+       ───────────────────────────────────────────── */
+    body { font-size: 15px; line-height: 1.75; }
+    .section-label { font-size: 11px; }
+    .section-title { font-size: 22px; }
+    .sub-head { font-size: 13.5px; color: var(--text-dark); }
+    .about-lead { font-size: 15px; }
+    .about-strong { font-size: 16px; }
+    .about-item-title { font-size: 12px; }
+    .about-item-desc { font-size: 14px; }
+    .brand-link-btn, .product-link-btn { font-size: 14px; padding: 12px 20px; min-height: 48px; }
+    .info-box-title, .key-msg-title { font-size: 12px; color: rgba(255,255,255,0.78); }
+    .info-row { font-size: 15px; margin-bottom: 12px; }
+    .info-key { font-size: 13px; min-width: 92px; color: rgba(255,255,255,0.75); }
+    .info-val small { font-size: 12.5px; color: rgba(255,255,255,0.78); }
+    .key-msg-badge { font-size: 11.5px; color: rgba(255,255,255,0.75); }
+    .key-msg-text { font-size: 15px; line-height: 1.75; }
+    .prod-option-head { font-size: 16px; }
+    .prod-option-items { font-size: 14.5px; }
+    .prod-option-desc { font-size: 14px; }
+    .brief-line { font-size: 21px; }
+    .must-item { font-size: 14.5px; line-height: 1.7; padding: 15px 16px; }
+    .must-icon { font-size: 17px; }
+    .concept-name, .fold-title { font-size: 15px; }
+    .concept-summary, .fold-summary { min-height: 54px; }
+    .concept-intro { font-size: 14.5px; }
+    .step-prod { font-size: 16px; }
+    .step-meta { font-size: 13px; }
+    .step-lead, .step-feat { font-size: 14px; }
+    .spec-key { font-size: 12px; }
+    .msg-item { font-size: 14.5px; line-height: 1.7; padding: 12px 14px; }
+    .angle-name { font-size: 14.5px; }
+    .angle-desc { font-size: 13.5px; }
+    .angle-num, .rule-num { font-size: 11px; }
+    .idea-name { font-size: 14.5px; }
+    .idea-desc { font-size: 14px; }
+    .idea-num { font-size: 12px; }
+    .ref-group-label { font-size: 12.5px; }
+    .ref-link { font-size: 14px; min-height: 48px; }
+    .ref-link span { font-size: 12px; }
+    .guard-title { font-size: 13px; }
+    .guard-item { font-size: 14px; }
+    .tl-name { font-size: 15px; }
+    .tl-when { font-size: 14px; }
+    .rule-title { font-size: 15px; }
+    .rule-sub { font-size: 13px; }
+    .rule-body { font-size: 14px; }
+    .hashtag-label { font-size: 13.5px; }
+    .hashtag { font-size: 14px; }
+    .copy-all-btn { font-size: 13.5px; }
+    .ref-note { font-size: 12.5px; line-height: 1.6; }
+    .warning-box { font-size: 14px; }
+    .form-label { font-size: 14.5px; }
+    .form-input, .form-textarea { font-size: 16px; } /* iOS 입력 시 자동 확대 방지 */
+    .line-opt-name { font-size: 15px; }
+    .line-opt-items { font-size: 13.5px; }
+    .note-box-title { font-size: 14.5px; }
+    .note-box ul { font-size: 14px; }
+    .agree-row { font-size: 14px; }
+    .agree-row input[type="checkbox"] { width: 20px; height: 20px; margin-top: 3px; }
+    .submit-btn { font-size: 16px; padding: 18px 20px; }
+    .settlement-lead, .settle-doc-text { font-size: 14.5px; }
+    .settle-tag-label { font-size: 13px; }
+    .settle-copy-box { font-size: 15px; }
+    .settle-copy-btn { font-size: 13px; padding: 10px 16px; min-height: 40px; }
+    .footer { font-size: 12.5px; }
+    .brief-label, .step-badge, .tl-dot { font-size: 11px; }
+    .fold-badge, .hashtag-label .required { font-size: 11px; padding: 2px 8px; }
+    .fold-count { font-size: 12px; }
+    .form-label .opt { font-size: 12.5px; }
+
+    /* ─────────────────────────────────────────────
+       ICONS — 이모지 대신 얇은 라인 아이콘
+       ───────────────────────────────────────────── */
+    .ic {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .sub-head { display: flex; align-items: center; gap: 10px; letter-spacing: 0.02em; }
+    .sub-head::before { content: ''; width: 18px; height: 1px; background: var(--gold); flex-shrink: 0; }
+    .sub-head-note { font-weight: 400; font-size: 12.5px; color: var(--text-light); }
+    .must-item { align-items: center; background: #FFFFFF; }
+    .must-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--cream);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0;
+      align-self: flex-start;
+    }
+    .angle-ico { background: var(--cream); border: 1px solid var(--border); color: var(--gold); }
+    .angle-ico .ic { width: 19px; height: 19px; }
+    .fold-icon { width: 30px; height: 30px; border-radius: 50%; background: var(--cream); border: 1px solid var(--border); color: var(--brand-text); }
+    .fold[open] .fold-icon { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+    .fold-icon .ic { width: 15px; height: 15px; }
+    .concept-chevron, .fold-chevron { width: 16px; height: 16px; color: var(--text-light); }
+    .copy-all-btn .ic { width: 15px; height: 15px; }
+    .note-box-title { display: flex; align-items: center; gap: 8px; }
+    .note-box-title .ic { width: 17px; height: 17px; color: var(--gold); }
+    .warning-box {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      background: #FBF8EF;
+      border: 1px solid #E6D9B4;
+      border-left: 3px solid var(--gold);
+      border-radius: 4px 12px 12px 4px;
+      color: #5E4F2A;
+    }
+    .warning-box strong { color: #3F3417; }
+    .warning-box .ic { color: var(--gold); margin-top: 3px; }
+    .guard-item::before { content: ''; width: 8px; height: 1px; background: currentColor; top: 50%; opacity: 0.6; }
+    .guard-item { padding-left: 18px; }
+    .guard-item::before { top: 1.05em; }
+
+    /* ─────────────────────────────────────────────
+       MOBILE
+       ───────────────────────────────────────────── */
     @media (max-width: 480px) {
-      .hero { padding: 44px 20px; min-height: 400px; }
-      .hero-wordmark { font-size: 42px; }
-      .hero-title { font-size: 19px; }
-      .section { padding: 36px 20px; }
-      .section-title { font-size: 18px; }
-      .about-lead { font-size: 13px; }
-      .info-box, .key-msg-box { padding: 20px; }
-      .info-row { font-size: 13px; }
-      .info-key { min-width: 68px; font-size: 11px; }
-      .brief-line { font-size: 16.5px; }
-      .brief-box { padding: 18px 20px; }
-      .must-item { font-size: 12.5px; padding: 12px 14px; }
-      .angle-item { padding: 12px 12px 14px; }
-      .angle-desc { font-size: 11.5px; }
-      .spec-val { font-size: 13.5px; }
-      .hashtag { font-size: 12px; padding: 10px 12px; }
-      .concept-body { padding: 2px 14px 16px; }
-      .footer { padding: 28px 20px; }
       body { letter-spacing: -0.01em; }
+      .hero { padding: 44px 20px; min-height: 380px; }
+      .hero-wordmark { font-size: 44px; }
+      .hero-tagline { font-size: 16px; margin-bottom: 24px; }
+      .hero-title { font-size: 21px; }
+      .hero-eyebrow, .hero-sub { font-size: 10.5px; letter-spacing: 0.24em; }
+      .section { padding: 40px 20px; }
+      .section-title { font-size: 21px; }
+      .about-en { font-size: 22px; }
+      .info-box, .key-msg-box { padding: 20px 18px; }
+      .info-key { min-width: 84px; }
+      .brief-box { padding: 20px; }
+      .brief-line { font-size: 19px; }
+      .product-box { padding: 16px; }
+      .concept-body { padding: 4px 14px 18px; }
+      .fold-body { padding: 16px 14px; }
+      /* 촬영 컷: 2열 → 1열 가로형 카드 */
+      .angle-grid { grid-template-columns: 1fr; gap: 8px; }
+      .angle-item { display: grid; grid-template-columns: 40px 1fr; column-gap: 12px; align-items: start; padding: 14px; }
+      .angle-ico { grid-row: span 3; margin-bottom: 0; width: 40px; height: 40px; font-size: 18px; }
+      .angle-num { margin-bottom: 0; }
+      .angle-name { margin-bottom: 2px; }
+      .spec-grid { gap: 6px; }
+      .spec { padding: 12px 4px; }
+      .spec-val { font-size: 15px; }
+      .settle-copy-box { padding: 12px 14px; font-size: 14px; }
+      .footer { padding: 28px 20px; }
     }
     @media (max-width: 360px) {
-      .section { padding: 28px 14px; }
-      .angle-grid { grid-template-columns: 1fr; }
-      .spec-grid { gap: 6px; }
+      .section { padding: 32px 16px; }
+      .info-row { flex-direction: column; gap: 0; }
+      .info-key { min-width: 0; }
       .fold-summary, .concept-summary { padding-left: 12px; padding-right: 12px; }
-      .fold-body { padding: 14px 12px; }
-      .hashtag { font-size: 11.5px; padding: 9px 10px; }
+      .hashtag { font-size: 13px; padding: 9px 11px; }
+      .form-row-zip .zip-search-btn { padding: 0 14px; }
     }
   </style>
 </head>
 <body>
+
+<!-- ICON SPRITE (라인 아이콘, Lucide 기반) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42Z"/><circle cx="7.5" cy="7.5" r=".6"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4Z"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+    <symbol id="i-frame" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7Z"/></symbol>
+    <symbol id="i-dine" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/></symbol>
+    <symbol id="i-hash" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  </defs>
+</svg>
 
 <!-- HERO -->
 <header class="hero">
@@ -956,14 +1107,14 @@
       <div class="about-item-title">PUGLIA, ITALY</div>
       <div class="about-item-desc">
         <strong>이탈리아 올리브오일 생산 1위 지역</strong>
-        풀리아 주 비셸리에의 햇올리브로 만든 오일을 그대로 담았습니다.
+        이탈리아 올리브오일 생산 1위 지역, 풀리아의 품질을 그대로 담았습니다.
       </div>
     </div>
     <div class="about-item">
       <div class="about-item-title">PREMIUM, RECOGNIZED</div>
       <div class="about-item-desc">
         <strong>전국 롯데백화점 37개 지점 입점</strong>
-        국내 유일 단독 수입사를 통해 소개되며, 온라인은 <span class="nb">네이버 스마트스토어</span>에서만 구매할 수 있습니다.
+        한국에서는 국내 유일 단독 수입사를 통해 <span class="nb">네이버 스마트스토어</span>에서만 구매할 수 있습니다.
       </div>
     </div>
   </div>
@@ -977,39 +1128,27 @@
 
   <div class="info-box">
     <div class="info-box-title">Campaign Details</div>
-    <div class="info-row"><div class="info-key">플랫폼</div><div class="info-val">인스타그램</div></div>
-    <div class="info-row"><div class="info-key">형식</div><div class="info-val">릴스 (Reels)</div></div>
-    <div class="info-row"><div class="info-key">발행 수량</div><div class="info-val">총 1건 <small>채널별 업로드</small></div></div>
-    <div class="info-row"><div class="info-key">발행 일정</div><div class="info-val"><strong>2026년 12월 초</strong></div></div>
+    <div class="info-row"><div class="info-key">형식</div><div class="info-val">인스타그램 릴스 1건 <span class="nb">(25초 이상)</span></div></div>
+    <div class="info-row"><div class="info-key">업로드 일정</div><div class="info-val"><strong>12월 첫째 주</strong></div></div>
     <div class="info-divider"></div>
-    <div class="info-row"><div class="info-key">협찬 제품</div><div class="info-val">라만테아 EVO 선물 패키지</div></div>
-    <div class="info-row"><div class="info-key">원고료</div><div class="info-val"><strong>220,000원</strong> <small>VAT 포함</small></div></div>
-    <div class="info-divider"></div>
-    <div class="info-row"><div class="info-key">브랜드 재게시</div><div class="info-val"><strong>필수</strong> <small>브랜디드 콘텐츠로 업로드</small></div></div>
-    <div class="info-row"><div class="info-key">광고 소재 활용</div><div class="info-val">별도 협의 <small>활용 기간 포함</small></div></div>
-    <div class="info-row"><div class="info-key">사전 검토</div><div class="info-val"><strong>필수</strong> <small>발행 전 최종본 브랜드 확인</small></div></div>
+    <div class="info-row"><div class="info-key">2차 활용</div><div class="info-val">동의</div></div>
+    <div class="info-row"><div class="info-key">파트너십 코드</div><div class="info-val"><strong>필수</strong></div></div>
+    <div class="info-row"><div class="info-key">업로드 유지</div><div class="info-val">3개월</div></div>
   </div>
 
   <div class="key-msg-box">
     <div class="key-msg-title">캠페인 목적&nbsp;·&nbsp;<span class="nb">연말 선물 시즌</span></div>
-    <div class="key-msg-text" style="margin-top:-6px;margin-bottom:4px;">라만테아는 <strong>네이버 스마트스토어에서만</strong> 구매할 수 있는 이탈리아 프리미엄 올리브오일입니다. 이번 협업으로 <strong>브랜드 인지도</strong>를 높이고, 스토어로의 <strong>자연스러운 유입과 구매 전환</strong>을 만들고자 합니다.</div>
+    <div class="key-msg-text" style="margin-top:-6px;margin-bottom:4px;">라만테아는 <strong>네이버 스마트스토어에서만</strong> 구매할 수 있는 이탈리아 프리미엄 올리브오일입니다.</div>
     <div class="key-msg-item">
       <div class="key-msg-badge">제품</div>
       <div class="key-msg-text">프리미엄 올리브오일 선물세트 <span class="nb">— 연말·명절 선물용</span></div>
     </div>
     <div class="key-msg-item">
       <div class="key-msg-badge">핵심 요청</div>
-      <div class="key-msg-text">연말·연초, <strong>소중한 사람에게 마음을 전하는 프리미엄 선물세트</strong>로 자유롭게 표현해 주세요.</div>
+      <div class="key-msg-text">연말·연초, <strong>소중한 사람들에게 마음을 전하기 좋은 프리미엄 선물세트</strong>로 자유롭게 표현해 주세요.</div>
     </div>
   </div>
 
-  <div class="target-box">
-    <div class="target-title">이런 크리에이터와 함께하고 싶어요</div>
-    <div class="target-row"><div class="target-key">카테고리</div><div class="target-val">리빙 / F&amp;B</div></div>
-    <div class="target-row"><div class="target-key">팔로워</div><div class="target-val">1만 ~ 10만</div></div>
-    <div class="target-row"><div class="target-key">주 시청층</div><div class="target-val">30~40대 이상 기혼 여성 중심</div></div>
-    <div class="target-row"><div class="target-key">중요 기준</div><div class="target-val">릴스 조회수 · 반응도 · 콘텐츠 퀄리티, 그리고 <span class="nb">고급스러운 콘텐츠 감도</span></div></div>
-  </div>
 
   <div class="sub-head" style="margin-top:0;">제공 제품</div>
   <div class="product-box">
@@ -1030,42 +1169,46 @@
 
   <div class="brief-box">
     <div class="brief-label">One-line Brief</div>
-    <div class="brief-line">올 연말, 사랑하는 사람에게<br>마음을 전하는 <em>가장 센스 있는 방법</em></div>
+    <div class="brief-line">올 연말, 사랑하는 사람들에게<br>마음을 전하는 <em>가장 센스 있는 방법</em></div>
     <div class="brief-protocol">— Lamantea Gift Set</div>
   </div>
 
-  <div class="sub-head">&#10004; 영상 및 캡션 필수 포함</div>
+  <div class="sub-head">필수 포함 요소</div>
   <div class="must-list">
     <div class="must-item">
-      <div class="must-icon">&#127916;</div>
-      <div><strong>[영상]</strong> 선물 패키지의 <strong>디자인과 구성</strong>(500ml 병 + 250ml 캔 2입)이 드러나도록 담고, 오일을 따르거나 요리에 쓰는 등 <strong>실제 사용 장면</strong>을 함께 보여주세요.</div>
+      <div class="must-icon"><svg class="ic"><use href="#i-pen"/></svg></div>
+      <div><strong>[브랜드명]</strong> 브랜드명 <strong>라만테아(Lamantea)</strong>를 언급해 주세요.</div>
     </div>
     <div class="must-item">
-      <div class="must-icon">&#9997;&#65039;</div>
-      <div><strong>[캡션]</strong> 브랜드명 <strong>라만테아(Lamantea)</strong>를 반드시 언급해 주세요. 제품 특징은 아래 &lsquo;제품 상세&rsquo;를 참고해 정확하게 적어주세요.</div>
-    </div>
-    <div class="must-item">
-      <div class="must-icon">&#128279;</div>
+      <div class="must-icon"><svg class="ic"><use href="#i-link"/></svg></div>
       <div><strong>[스토어 링크]</strong> <strong>네이버 스마트스토어 제품 링크 삽입 필수</strong>입니다.<br><a href="https://smartstore.naver.com/lamantea/products/13053086247" target="_blank" rel="noopener">smartstore.naver.com/lamantea/products/13053086247</a></div>
     </div>
     <div class="must-item">
-      <div class="must-icon">&#9888;&#65039;</div>
-      <div><strong>[광고 표기]</strong> <strong>#광고 또는 #협찬</strong> 중 1개 이상 표기해 주세요. <span class="nb">(법적 의무)</span></div>
+      <div class="must-icon"><svg class="ic"><use href="#i-tag"/></svg></div>
+      <div><strong>[캡션]</strong> 캡션에 <strong>#광고 또는 #협찬</strong> 중 1개 이상을 표기해 주세요. <span class="nb">(법적 의무)</span></div>
     </div>
     <div class="must-item">
-      <div class="must-icon">&#128064;</div>
+      <div class="must-icon"><svg class="ic"><use href="#i-eye"/></svg></div>
       <div><strong>[사전 검토]</strong> 발행 전 <strong>최종본을 브랜드에 먼저 공유</strong>해 확인받아 주세요.</div>
     </div>
   </div>
 
-  <div class="sub-head">&#9654; 상세 가이드 <span style="font-weight:500;color:var(--text-light);">— 항목을 탭하여 펼쳐보세요</span></div>
+  <div class="sub-head">이렇게 담아주시면 좋아요 <span class="sub-head-note">권장</span></div>
+  <div class="must-list">
+    <div class="must-item">
+      <div class="must-icon"><svg class="ic"><use href="#i-video"/></svg></div>
+      <div>선물 패키지의 <strong>디자인과 구성</strong>(500ml 병 + 250ml 캔 2입)과 오일을 따르거나 요리에 쓰는 <strong>실제 사용 장면</strong>을 함께 보여주세요. 제품 특징은 아래 &lsquo;제품 상세&rsquo;를 참고해 정확하게 적어주세요.</div>
+    </div>
+  </div>
+
+  <div class="sub-head">상세 가이드 <span class="sub-head-note">항목을 탭하여 펼쳐보세요</span></div>
   <div class="concept-list">
 
     <details class="concept">
       <summary class="concept-summary">
         <span class="concept-num">1</span>
         <span class="concept-name">제품 상세&nbsp;·&nbsp;<span class="nb">EVO 라인</span></span>
-        <span class="concept-chevron">&#8964;</span>
+        <svg class="ic concept-chevron"><use href="#i-chev"/></svg>
       </summary>
       <div class="concept-body">
         <div class="concept-intro">제품 특징을 <strong>정확한 수치</strong>로 확인하신 뒤 소개해 주세요.</div>
@@ -1084,8 +1227,8 @@
           <div class="step-lead">2025년 햇올리브를 사용한 엑스트라버진 올리브오일. 신선한 올리브의 향과 섬세한 맛이 특징입니다.</div>
           <div class="step-feat"><strong>손상을 최소화한 수확</strong><span>수확 시 올리브 손상을 최소화하는 방식으로 채취합니다.</span></div>
           <div class="step-feat"><strong>27°C 이하 저온 냉압착</strong><span>올리브 본연의 풍미와 영양을 그대로 보존합니다.</span></div>
-          <div class="step-feat"><strong>산도 0.2% 이하의 높은 품질</strong><span>엑스트라버진 등급 중에서도 낮은 산도의 고품질 오일입니다.</span></div>
-          <div class="step-feat"><strong>빈티지 디자인 패키지</strong><span>화려한 빈티지 패턴의 병·캔 패키지로 선물용으로 특히 인기가 높습니다.</span></div>
+          <div class="step-feat"><strong>산도 0.2% 이하의 높은 품질</strong><span>산도 0.2% 이하의 높은 품질을 자랑합니다.</span></div>
+          <div class="step-feat"><strong>빈티지 디자인 패키지</strong><span>화려한 빈티지 디자인의 패키지로 선물용으로도 인기가 높습니다.</span></div>
         </div>
       </div>
     </details>
@@ -1094,7 +1237,7 @@
       <summary class="concept-summary">
         <span class="concept-num">2</span>
         <span class="concept-name">콘텐츠 방향&nbsp;·&nbsp;<span class="nb">핵심 메시지</span></span>
-        <span class="concept-chevron">&#8964;</span>
+        <svg class="ic concept-chevron"><use href="#i-chev"/></svg>
       </summary>
       <div class="concept-body">
         <div class="concept-intro"><strong>연말·연초 프리미엄 선물세트</strong>로서 아래 메시지 중 채널에 맞는 포인트를 골라 자연스럽게 녹여주세요.</div>
@@ -1111,31 +1254,31 @@
       <summary class="concept-summary">
         <span class="concept-num">3</span>
         <span class="concept-name">촬영 가이드&nbsp;·&nbsp;<span class="nb">추천 컷 4</span></span>
-        <span class="concept-chevron">&#8964;</span>
+        <svg class="ic concept-chevron"><use href="#i-chev"/></svg>
       </summary>
       <div class="concept-body">
         <div class="concept-intro">아래 컷을 참고해 <strong>선물 · 오브제 · 실사용</strong>이 모두 보이도록 구성해 주세요.</div>
         <div class="angle-grid" style="margin-top:14px;">
           <div class="angle-item">
-            <div class="angle-ico">&#127873;</div>
+            <div class="angle-ico"><svg class="ic"><use href="#i-gift"/></svg></div>
             <div class="angle-num">CUT 1</div>
             <div class="angle-name">언박싱 컷</div>
             <div class="angle-desc">선물 박스를 열어 병 1입 + 캔 2입 구성이 한눈에 보이도록 담아주세요.</div>
           </div>
           <div class="angle-item">
-            <div class="angle-ico">&#128444;&#65039;</div>
+            <div class="angle-ico"><svg class="ic"><use href="#i-frame"/></svg></div>
             <div class="angle-num">CUT 2</div>
             <div class="angle-name">오브제 컷</div>
             <div class="angle-desc">주방·다이닝 공간에 놓아 빈티지 패키지가 인테리어 오브제처럼 보이게 연출해 주세요.</div>
           </div>
           <div class="angle-item">
-            <div class="angle-ico">&#128167;</div>
+            <div class="angle-ico"><svg class="ic"><use href="#i-drop"/></svg></div>
             <div class="angle-num">CUT 3</div>
             <div class="angle-name">푸어링 컷</div>
             <div class="angle-desc">오일을 따르는 순간을 근접 촬영해 맑은 색감과 질감을 보여주세요.</div>
           </div>
           <div class="angle-item">
-            <div class="angle-ico">&#127860;</div>
+            <div class="angle-ico"><svg class="ic"><use href="#i-dine"/></svg></div>
             <div class="angle-num">CUT 4</div>
             <div class="angle-name">테이블 · 선물 컷</div>
             <div class="angle-desc">요리·플레이팅에 활용하거나, 소중한 사람에게 건네는 장면으로 마무리해 주세요.</div>
@@ -1149,7 +1292,7 @@
       <summary class="concept-summary">
         <span class="concept-num">4</span>
         <span class="concept-name">콘텐츠 소재 참고&nbsp;·&nbsp;<span class="nb">아이디어 5</span></span>
-        <span class="concept-chevron">&#8964;</span>
+        <svg class="ic concept-chevron"><use href="#i-chev"/></svg>
       </summary>
       <div class="concept-body">
         <div class="concept-intro"><strong>연말 선물 시즌</strong>과 리빙·F&amp;B 채널 톤을 바탕으로 한 참고 아이디어입니다.</div>
@@ -1168,7 +1311,7 @@
       <summary class="concept-summary">
         <span class="concept-num">5</span>
         <span class="concept-name">레퍼런스&nbsp;·&nbsp;<span class="nb">참고 계정</span></span>
-        <span class="concept-chevron">&#8964;</span>
+        <svg class="ic concept-chevron"><use href="#i-chev"/></svg>
       </summary>
       <div class="concept-body">
         <div class="concept-intro">브랜드가 기대하는 <strong>무드와 콘텐츠 감도</strong>를 참고해 주세요.</div>
@@ -1191,10 +1334,10 @@
   <div class="fold-group">
     <details class="fold">
       <summary class="fold-summary">
-        <span class="fold-icon">&#9878;</span>
+        <span class="fold-icon"><svg class="ic"><use href="#i-scale"/></svg></span>
         <span class="fold-title">콘텐츠 가드레일</span>
         <span class="fold-count">Must&nbsp;/&nbsp;Avoid</span>
-        <span class="fold-chevron">&#8964;</span>
+        <svg class="ic fold-chevron"><use href="#i-chev"/></svg>
       </summary>
       <div class="fold-body">
         <div class="guard-grid">
@@ -1203,8 +1346,7 @@
             <div class="guard-item">브랜드명 라만테아(Lamantea) 언급</div>
             <div class="guard-item">네이버 스마트스토어 링크 삽입</div>
             <div class="guard-item">#광고 또는 #협찬 표기</div>
-            <div class="guard-item">선물 패키지 구성과 실제 사용 장면</div>
-            <div class="guard-item">정확한 제품 정보 (산도·냉압착·햇올리브)</div>
+            <div class="guard-item">발행 전 최종본 브랜드 확인</div>
           </div>
           <div class="guard-box avoid">
             <div class="guard-title">Avoid</div>
@@ -1220,27 +1362,27 @@
 
     <details class="fold">
       <summary class="fold-summary">
-        <span class="fold-icon">&#128197;</span>
+        <span class="fold-icon"><svg class="ic"><use href="#i-cal"/></svg></span>
         <span class="fold-title">제출 · 발행 일정</span>
         <span class="fold-count">4단계</span>
-        <span class="fold-chevron">&#8964;</span>
+        <svg class="ic fold-chevron"><use href="#i-chev"/></svg>
       </summary>
       <div class="fold-body">
         <ol class="timeline">
           <li class="tl-item"><span class="tl-dot">1</span><div><div class="tl-name">제품 발송</div><div class="tl-when">가이드 제공 후 3일 이내</div></div></li>
           <li class="tl-item"><span class="tl-dot">2</span><div><div class="tl-name">초안 제출</div><div class="tl-when">제품 수령 후 7일 이내</div></div></li>
           <li class="tl-item"><span class="tl-dot">3</span><div><div class="tl-name">피드백 전달</div><div class="tl-when">초안 수령 후 3일 이내</div></div></li>
-          <li class="tl-item final"><span class="tl-dot">4</span><div><div class="tl-name">최종 발행</div><div class="tl-when"><strong style="color:var(--brand-text);">2026년 12월 초</strong></div></div></li>
+          <li class="tl-item final"><span class="tl-dot">4</span><div><div class="tl-name">최종 발행</div><div class="tl-when"><strong style="color:var(--brand-text);">12월 첫째 주</strong></div></div></li>
         </ol>
       </div>
     </details>
 
     <details class="fold">
       <summary class="fold-summary">
-        <span class="fold-icon">&#128203;</span>
+        <span class="fold-icon"><svg class="ic"><use href="#i-list"/></svg></span>
         <span class="fold-title">진행 규정</span>
         <span class="fold-count">3</span>
-        <span class="fold-chevron">&#8964;</span>
+        <svg class="ic fold-chevron"><use href="#i-chev"/></svg>
       </summary>
       <div class="fold-body">
         <div class="rule-grid">
@@ -1264,7 +1406,7 @@
           </div>
           <div class="rule-card">
             <div class="rule-num">03</div>
-            <div class="rule-title">음원 사용 규정</div>
+            <div class="rule-title">음원 사용 규정 <span style="font-size:11px;font-weight:500;color:var(--text-light);">(공통 권장)</span></div>
             <div class="rule-sub">상업적 음원 사용 불가</div>
             <div class="rule-body">
               <p>유료 음원, 인기 차트곡 등 저작권 이슈가 있을 수 있는 음원은 사용할 수 없습니다.</p>
@@ -1277,10 +1419,10 @@
 
     <details class="fold">
       <summary class="fold-summary">
-        <span class="fold-icon">#</span>
+        <span class="fold-icon"><svg class="ic"><use href="#i-hash"/></svg></span>
         <span class="fold-title">해시태그</span>
         <span class="fold-badge">필수</span>
-        <span class="fold-chevron">&#8964;</span>
+        <svg class="ic fold-chevron"><use href="#i-chev"/></svg>
       </summary>
       <div class="fold-body">
         <div class="hashtag-label">광고 표기 <span class="required">택 1 이상</span></div>
@@ -1289,7 +1431,7 @@
           <div class="hashtag ad">#협찬</div>
         </div>
         <div class="hashtag-label">브랜드 해시태그 <span class="required">필수</span></div>
-        <button type="button" class="copy-all-btn" onclick="copyAllTags()">&#9112; 브랜드 해시태그 전체 복사</button>
+        <button type="button" class="copy-all-btn" onclick="copyAllTags()"><svg class="ic"><use href="#i-copy"/></svg> 브랜드 해시태그 전체 복사</button>
         <div class="hashtag-wrap" id="brandTags">
           <div class="hashtag">#라만테아</div>
           <div class="hashtag">#Lamantea</div>
@@ -1309,7 +1451,7 @@
   </div>
 
   <div class="warning-box">
-    &#9888;&#65039; 캠페인 참여 시 <span class="nb">브랜디드 콘텐츠 업로드</span> 및 <span class="nb">브랜드 SNS 재게시</span>에 동의하는 것으로 간주됩니다.
+    <svg class="ic"><use href="#i-alert"/></svg><span>캠페인 참여 시 <span class="nb">브랜디드 콘텐츠 업로드</span> 및 <span class="nb">브랜드 SNS 재게시</span>에 동의하는 것으로 간주됩니다.</span>
   </div>
 </section>
 
@@ -1338,7 +1480,7 @@
 
     <div class="form-group">
       <label class="form-label" for="appInstagram">인스타그램 링크<span class="req">*</span></label>
-      <input type="text" id="appInstagram" name="instagram" class="form-input" placeholder="@username 또는 instagram.com/username" required>
+      <input type="text" id="appInstagram" name="instagram" class="form-input" placeholder="@아이디 또는 프로필 링크" required>
     </div>
 
     <div class="form-group">
@@ -1377,12 +1519,12 @@
     <input type="hidden" id="appFullAddress" name="fullAddress">
 
     <div class="warning-box">
-      &#9888;&#65039; <strong>배송지는 매 캠페인마다 새로 확인합니다.</strong><br>
-      오배송 방지를 위해 입력값을 다시 한번 체크해 주세요.
+      <svg class="ic"><use href="#i-alert"/></svg><span><strong>배송지는 매 캠페인마다 새로 확인합니다.</strong><br>
+      오배송 방지를 위해 입력값을 다시 한번 체크해 주세요.</span>
     </div>
 
     <div class="note-box" style="margin-top:16px;">
-      <div class="note-box-title">&#128204; 원고료 &amp; 정산 안내</div>
+      <div class="note-box-title"><svg class="ic"><use href="#i-info"/></svg>원고료 &amp; 정산 안내</div>
       <ul>
         <li>원고료 <strong>220,000원 (VAT 포함)</strong></li>
         <li>정산 자료 제출 후 <strong>2주</strong> 이내 지급됩니다.</li>
@@ -1390,7 +1532,7 @@
     </div>
 
     <div class="note-box">
-      <div class="note-box-title">&#128204; 콘텐츠 활용 안내</div>
+      <div class="note-box-title"><svg class="ic"><use href="#i-info"/></svg>콘텐츠 활용 안내</div>
       <ul>
         <li>콘텐츠는 브랜디드 콘텐츠로 업로드되며, 브랜드 SNS에 재게시될 수 있습니다.</li>
         <li>광고 소재 활용 및 활용 기간은 별도 협의 후 진행됩니다.</li>
@@ -1408,7 +1550,7 @@
       </label>
       <label class="agree-row">
         <input type="checkbox" name="agreeSchedule" required>
-        <span><strong>[필수]</strong> 초안 제출·사전 검토 일정과 <span class="nb">12월 초 발행</span> 일정을 준수합니다.</span>
+        <span><strong>[필수]</strong> 초안 제출·사전 검토 일정과 <span class="nb">12월 첫째 주 업로드</span> 일정을 준수합니다.</span>
       </label>
       <label class="agree-row">
         <input type="checkbox" name="agreeCancel" required>
@@ -1442,8 +1584,8 @@
   </div>
 
   <div class="warning-box">
-    ! 정산 자료는 브랜드로부터 확인 안내를 받은 인플루언서에 한해서 제출해 주세요.<br>
-    ! 확정 안내를 받지 못한 경우 서류를 제출하지 마세요.
+    <svg class="ic"><use href="#i-alert"/></svg><span>정산 자료는 브랜드로부터 확인 안내를 받은 인플루언서에 한해서 제출해 주세요.<br>
+    확정 안내를 받지 못한 경우 서류를 제출하지 마세요.</span>
   </div>
 </section>
 
@@ -1487,7 +1629,7 @@
   }
 
   document.querySelectorAll('.hashtag').forEach(el => {
-    el.addEventListener('click', () => copyText(el.textContent.replace('⎘', '').trim()));
+    el.addEventListener('click', () => copyText(el.textContent.trim()));
   });
 
   function copyAllTags() {
