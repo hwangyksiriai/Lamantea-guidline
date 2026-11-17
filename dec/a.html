@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lamantea — 인플루언서 가이드라인</title>
+
+  <!-- Open Graph (카카오톡/인스타그램/SNS 공유 미리보기) — 배포 후 og:url / og:image 절대경로로 교체 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="라만테아 인플루언서 가이드라인">
+  <meta property="og:description" content="Lamantea × Creator Campaign — 연말 프리미엄 올리브오일 선물세트 콘텐츠 가이드">
+  <meta property="og:image" content="../image/product.png">
+  <meta name="description" content="Lamantea × Creator Campaign — 연말 프리미엄 올리브오일 선물세트 콘텐츠 가이드">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="theme-color" content="#4B5530">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #4B5530;
+      --brand-deep: #363D21;
+      --brand-line: #6E7A45;
+      --brand-pale: #EEF0E2;
+      --brand-text: #5A6634;
+      --gold: #B08D4C;
+      --cream: #FAF8F3;
+      --warm-white: #F3F0E6;
+      --text-dark: #26261E;
+      --text-mid: #57533F;
+      --text-light: #827C64;
+      --border: #E3DDCC;
+      --tag-bg: #EFEBDD;
+      --on-brand: #FFFFFF;
+      --on-brand-accent: #E6D7A8;
+      --serif: 'Cormorant Garamond', 'Noto Sans KR', serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      max-width: 640px;
+      margin: 0 auto;
+      min-height: 460px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 56px 28px;
+      color: var(--text-dark);
+      background: var(--warm-white) url('../image/banner.webp') center / cover no-repeat;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.6);
+    }
+    .hero > * { position: relative; text-shadow: 0 0 14px rgba(255,255,255,0.9), 0 0 4px rgba(255,255,255,0.7); }
+    .hero-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      color: var(--text-mid);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .hero-wordmark {
+      font-family: var(--serif);
+      font-size: 52px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1;
+      color: var(--brand-deep);
+    }
+    .hero-tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 17px;
+      color: var(--gold);
+      margin-top: 8px;
+      margin-bottom: 30px;
+    }
+    .hero-title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+    .hero-sub {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--brand-text);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 48px 28px;
+      border-bottom: 1px solid var(--border);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      color: var(--brand-text);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--brand-text);
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+    .sub-head {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-mid);
+      margin: 24px 0 10px;
+      letter-spacing: 0.03em;
+    }
+
+    /* ABOUT */
+    .about-lead {
+      font-size: 14px;
+      color: var(--text-mid);
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.8;
+    }
+    .about-en {
+      display: block;
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .about-en-sub {
+      display: block;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .about-strong {
+      display: block;
+      color: var(--text-dark);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .about-grid { display: grid; gap: 12px; }
+    .about-item {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .about-item-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--brand-text);
+      margin-bottom: 6px;
+    }
+    .about-item-desc { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+    .about-item-desc strong { display: block; color: var(--text-dark); margin-bottom: 4px; }
+    .brand-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: var(--brand);
+      color: var(--on-brand);
+      font-size: 12.5px;
+      font-weight: 600;
+      border-radius: 20px;
+      border: 1px solid var(--brand-line);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .brand-link-btn:active { opacity: 0.75; }
+
+    /* INFO BOX */
+    .info-box {
+      background: var(--brand);
+      color: var(--on-brand);
+      border: 1px solid var(--brand-line);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .info-box-title, .key-msg-title {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.62);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13.5px;
+      margin-bottom: 10px;
+    }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-key {
+      min-width: 78px;
+      color: rgba(255,255,255,0.58);
+      font-size: 12px;
+      flex-shrink: 0;
+      padding-top: 1px;
+    }
+    .info-val { color: var(--on-brand); font-weight: 500; line-height: 1.6; }
+    .info-val strong { color: var(--on-brand-accent); }
+    .info-val small { display: block; font-size: 11.5px; color: rgba(255,255,255,0.6); font-weight: 400; }
+    .info-divider { height: 1px; background: rgba(255,255,255,0.18); margin: 14px 0; }
+
+    /* KEY MESSAGE */
+    .key-msg-box {
+      background: var(--brand);
+      border: 1px solid var(--brand-line);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+    }
+    .key-msg-item { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.2); }
+    .key-msg-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .key-msg-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.62);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    .key-msg-text { font-size: 13px; color: var(--on-brand); line-height: 1.7; }
+    .key-msg-text strong { color: var(--on-brand-accent); }
+
+
+    /* PRODUCT */
+    .product-box {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .product-photo { width: 100%; border-radius: 10px; display: block; }
+    .prod-option {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      background: #FFFFFF;
+    }
+    .prod-option-head { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; }
+    .prod-option-items {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-dark);
+      background: var(--tag-bg);
+      border-radius: 8px;
+      padding: 10px 12px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .prod-option-desc { display: flex; gap: 6px; font-size: 12.5px; color: var(--text-mid); line-height: 1.6; }
+    .prod-option-desc::before { content: '→'; color: var(--brand-text); flex-shrink: 0; }
+    .product-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 11px 16px;
+      background: var(--tag-bg);
+      color: var(--brand-text);
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 20px;
+      text-decoration: none;
+      align-self: flex-start;
+      border: 1px solid var(--border);
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ONE-LINE BRIEF */
+    .brief-box {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+    }
+    .brief-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--text-light);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .brief-line { font-size: 19px; font-weight: 700; color: var(--text-dark); line-height: 1.55; letter-spacing: -0.01em; }
+    .brief-line em { font-style: normal; color: var(--brand-text); }
+    .brief-protocol {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--gold);
+      margin-top: 8px;
+    }
+
+    /* MUST LIST */
+    .must-list { display: grid; gap: 10px; margin-bottom: 24px; }
+    .must-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .must-icon { font-size: 15px; margin-top: 1px; flex-shrink: 0; }
+    .must-item strong { color: var(--text-dark); }
+    .must-item a { color: var(--brand-text); font-weight: 700; word-break: break-all; }
+
+    /* SPEC CARD */
+    .step-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #FFFFFF;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+    }
+    .step-card:last-child { margin-bottom: 0; }
+    .step-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--on-brand);
+      background: var(--brand);
+      padding: 3px 9px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .step-prod-en { font-family: var(--serif); font-size: 15px; font-weight: 600; color: var(--brand-text); margin-bottom: 2px; }
+    .step-prod { font-size: 14px; font-weight: 700; color: var(--text-dark); line-height: 1.45; }
+    .step-meta { font-size: 11.5px; color: var(--text-light); margin-top: 2px; margin-bottom: 10px; }
+    .step-lead {
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.65;
+      padding: 11px 13px;
+      background: var(--tag-bg);
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .step-feat { font-size: 12.5px; line-height: 1.6; margin-bottom: 10px; }
+    .step-feat:last-child { margin-bottom: 0; }
+    .step-feat strong { display: block; color: var(--text-dark); margin-bottom: 2px; }
+    .step-feat span { color: var(--text-mid); }
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .spec {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 8px;
+      text-align: center;
+    }
+    .spec-val { font-size: 15px; font-weight: 700; color: var(--brand-text); line-height: 1.3; }
+    .spec-key { font-size: 10.5px; color: var(--text-mid); margin-top: 4px; line-height: 1.4; }
+
+    /* GUARDRAILS */
+    .guard-grid { display: grid; gap: 12px; }
+    .guard-box { border-radius: 12px; padding: 18px 20px; }
+    .guard-box.must { background: var(--text-dark); }
+    .guard-box.avoid { background: var(--warm-white); border: 1px solid var(--border); }
+    .guard-title { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
+    .guard-box.must .guard-title { color: #FFFFFF; }
+    .guard-box.avoid .guard-title { color: var(--text-dark); }
+    .guard-item { font-size: 12.5px; line-height: 1.7; padding: 4px 0 4px 18px; position: relative; }
+    .guard-box.must .guard-item { color: rgba(255,255,255,0.85); }
+    .guard-box.avoid .guard-item { color: var(--text-mid); }
+    .guard-item::before { content: '\25A1'; position: absolute; left: 0; opacity: 0.7; }
+
+    /* ANGLE GUIDE (이미지 없는 카드형) */
+    .angle-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .angle-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #FFFFFF;
+      padding: 14px 16px;
+    }
+    .angle-ico {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--brand-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .angle-num { font-size: 10px; font-weight: 700; color: var(--brand-text); letter-spacing: 0.08em; margin-bottom: 4px; }
+    .angle-name { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; }
+    .angle-desc { font-size: 12px; color: var(--text-mid); line-height: 1.6; }
+
+    /* RULE CARDS */
+    .rule-grid { display: grid; gap: 10px; }
+    .rule-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #FFFFFF;
+      padding: 16px 18px;
+    }
+    .rule-num { font-size: 10px; font-weight: 700; color: var(--text-light); letter-spacing: 0.1em; }
+    .rule-title { font-size: 13.5px; font-weight: 700; color: var(--text-dark); margin: 2px 0 4px; }
+    .rule-sub { font-size: 12px; font-weight: 700; color: var(--brand-text); margin-bottom: 8px; }
+    .rule-body { font-size: 12.5px; color: var(--text-mid); line-height: 1.65; }
+    .rule-body p { margin-bottom: 6px; }
+    .rule-body p:last-child { margin-bottom: 0; }
+
+    /* TIMELINE */
+    .timeline { list-style: none; position: relative; padding-left: 4px; }
+    .tl-item { position: relative; display: flex; gap: 14px; padding-bottom: 16px; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 24px;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+    .tl-item:last-child::before { display: none; }
+    .tl-dot {
+      flex-shrink: 0;
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      background: var(--brand-pale);
+      border: 1px solid var(--brand-line);
+      color: var(--brand-text);
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .tl-item.final .tl-dot { background: var(--brand); color: var(--on-brand); }
+    .tl-name { font-size: 13px; font-weight: 700; color: var(--text-dark); }
+    .tl-when { font-size: 12.5px; color: var(--text-mid); }
+
+    /* IDEAS */
+    .idea-item { display: flex; gap: 11px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .idea-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .idea-num { flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--brand-text); margin-top: 2px; min-width: 18px; }
+    .idea-name { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+    .idea-desc { font-size: 12.5px; color: var(--text-mid); line-height: 1.6; }
+
+    /* CONCEPT ACCORDION */
+    .concept-list { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .concept {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .concept[open] { border-color: var(--brand-line); }
+    .concept-summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .concept-summary::-webkit-details-marker { display: none; }
+    .concept-num {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--tag-bg);
+      color: var(--brand-text);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .concept[open] .concept-num { background: var(--brand); color: var(--on-brand); }
+    .concept-name { flex: 1; font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+    .concept-chevron { font-size: 11px; color: var(--text-light); transition: transform 0.2s; flex-shrink: 0; }
+    .concept[open] .concept-chevron { transform: rotate(180deg); color: var(--brand-text); }
+    .concept-body { padding: 2px 16px 18px; border-top: 1px solid var(--border); }
+    .concept-intro { margin-top: 10px; font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+    .concept-intro strong { color: var(--text-dark); }
+
+    .msg-list { margin-top: 14px; display: grid; gap: 8px; }
+    .msg-item {
+      background: var(--warm-white);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 13px;
+      font-size: 12.5px;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    .msg-item.closing {
+      background: var(--brand);
+      color: var(--on-brand);
+      border-left-color: var(--on-brand-accent);
+      font-weight: 500;
+    }
+
+    .ref-group-label { font-size: 11px; font-weight: 700; color: var(--brand-text); letter-spacing: 0.05em; margin: 16px 0 8px; }
+    .ref-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-decoration: none;
+      padding: 9px 12px;
+      margin-bottom: 6px;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .ref-link:active { background: var(--tag-bg); }
+    .ref-link span { font-size: 11px; font-weight: 500; color: var(--text-light); margin-left: auto; }
+    .ref-link::after { content: '→'; font-size: 12px; font-weight: 400; color: var(--brand-text); }
+
+    /* FOLD */
+    .fold-group { display: flex; flex-direction: column; gap: 10px; }
+    .fold {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .fold[open] { border-color: var(--brand-line); }
+    .fold-summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .fold-summary::-webkit-details-marker { display: none; }
+    .fold-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: var(--tag-bg);
+      color: var(--brand-text);
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .fold[open] .fold-icon { background: var(--brand-pale); border: 1px solid var(--brand-line); }
+    .fold-title { flex: 1; font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+    .fold-badge {
+      flex-shrink: 0;
+      background: var(--brand);
+      color: var(--on-brand);
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+    }
+    .fold-count { flex-shrink: 0; font-size: 11px; font-weight: 600; color: var(--text-light); }
+    .fold-chevron { font-size: 11px; color: var(--text-light); transition: transform 0.2s; flex-shrink: 0; }
+    .fold[open] .fold-chevron { transform: rotate(180deg); color: var(--brand-text); }
+    .fold-body { padding: 16px; border-top: 1px solid var(--border); background: var(--cream); }
+
+    /* HASHTAG */
+    .hashtag-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-mid);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hashtag-label .required { background: var(--brand); color: var(--on-brand); font-size: 10px; padding: 2px 7px; border-radius: 10px; }
+    .hashtag-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .hashtag {
+      font-size: 13px;
+      padding: 10px 14px;
+      border-radius: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      min-height: 44px;
+      background: var(--brand);
+      color: var(--on-brand);
+      border: 1px solid var(--brand-line);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .hashtag:active { opacity: 0.6; }
+    .hashtag::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: currentColor;
+      opacity: 0.55;
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='8' y='8' width='14' height='14' rx='2'/%3E%3Cpath d='M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2'/%3E%3C/svg%3E") center / contain no-repeat;
+              mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='8' y='8' width='14' height='14' rx='2'/%3E%3Cpath d='M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2'/%3E%3C/svg%3E") center / contain no-repeat;
+    }
+    .hashtag.ad { background: var(--text-dark); border-color: var(--text-dark); }
+    .copy-all-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 16px;
+      background: #FFFFFF;
+      color: var(--brand-text);
+      border: 1px solid var(--brand-line);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      min-height: 44px;
+      margin-bottom: 12px;
+    }
+
+    /* WARNING / NOTE */
+    .warning-box {
+      background: #FFFBF0;
+      border: 1px solid #F0D080;
+      border-radius: 12px;
+      padding: 16px 18px;
+      font-size: 12.5px;
+      color: #7A5A00;
+      line-height: 1.7;
+      margin-top: 16px;
+    }
+    .warning-box strong { color: #5A3D00; }
+    .ref-note { font-size: 11px; color: var(--text-light); margin-bottom: 4px; }
+    .ref-note strong { color: var(--text-mid); }
+    .divider { height: 1px; background: var(--border); margin: 24px 0; }
+
+    /* APPLICATION FORM */
+    .form-group { margin-bottom: 18px; }
+    .line-opt {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--brand);
+      border-radius: 10px;
+      padding: 12px 14px;
+      background: var(--brand-pale);
+    }
+    .line-opt img { width: 56px; height: 56px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+    .line-opt-name { display: block; font-size: 13.5px; font-weight: 700; color: var(--text-dark); margin-bottom: 2px; }
+    .line-opt-items { display: block; font-size: 12.5px; color: var(--text-mid); line-height: 1.5; }
+    .form-label { display: block; font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+    .form-label .req { color: #C0504D; margin-left: 2px; }
+    .form-label .opt { font-size: 11px; color: var(--text-light); font-weight: 500; margin-left: 4px; }
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--text-dark);
+      background: white;
+    }
+    .form-input:focus, .form-textarea:focus { outline: none; border-color: var(--brand-line); }
+    .form-input[readonly] { background: var(--warm-white); }
+    .form-textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+    .form-row-zip { display: flex; gap: 8px; }
+    .form-row-zip .form-input { flex: 1; min-width: 0; }
+    .zip-search-btn {
+      padding: 0 18px;
+      background: var(--text-dark);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .note-box {
+      border: 1px dashed var(--brand-line);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      background: var(--cream);
+    }
+    .note-box-title { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+    .note-box ul { padding-left: 18px; font-size: 12.5px; color: var(--text-mid); line-height: 1.8; }
+    .agree-list { margin: 20px 0; display: grid; gap: 12px; }
+    .agree-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      cursor: pointer;
+    }
+    .agree-row input[type="checkbox"] {
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      accent-color: var(--brand);
+    }
+    .agree-row strong { color: var(--brand-text); font-weight: 700; }
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 16px 20px;
+      background: var(--brand-deep);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      font-size: 14.5px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .submit-btn:active { opacity: 0.85; }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* SETTLEMENT */
+    .settlement-lead { font-size: 13px; color: var(--text-mid); margin-bottom: 20px; line-height: 1.7; }
+    .settle-tag-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-mid);
+      background: var(--tag-bg);
+      padding: 4px 10px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    .settle-doc-text { font-size: 13px; color: var(--text-mid); margin: 0 0 20px; }
+    .settle-copy-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      font-size: 13.5px;
+    }
+    .settle-copy-box span { word-break: break-all; }
+    .settle-copy-btn {
+      flex-shrink: 0;
+      background: var(--text-dark);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: inherit;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* TOAST */
+    .copy-toast {
+      position: fixed;
+      bottom: max(32px, env(safe-area-inset-bottom, 32px));
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: rgba(38,38,30,0.94);
+      color: white;
+      font-size: 13px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 9999;
+      max-width: calc(100% - 32px);
+      text-align: center;
+    }
+    .copy-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* FOOTER */
+    .footer {
+      max-width: 640px;
+      margin: 0 auto;
+      background: var(--brand-deep);
+      color: rgba(255,255,255,0.62);
+      text-align: center;
+      padding: 36px 32px;
+      padding-bottom: max(36px, env(safe-area-inset-bottom, 36px));
+      font-size: 11.5px;
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+    }
+    .footer-mark { font-family: var(--serif); font-size: 22px; font-weight: 600; color: #FFFFFF; letter-spacing: 0.02em; }
+    .footer-tag { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--on-brand-accent); margin-bottom: 12px; }
+
+    .nb { white-space: nowrap; }
+    .about-lead, .about-item-desc, .concept-intro, .key-msg-text, .msg-item,
+    .must-item > div, .info-row, .ref-note, .warning-box { text-wrap: pretty; }
+    .section-title, .hero-title, .concept-name { text-wrap: balance; }
+
+    /* ─────────────────────────────────────────────
+       READABILITY — 본문 최소 14px, 보조 텍스트 최소 12.5px, 대비 강화
+       ───────────────────────────────────────────── */
+    body { font-size: 15px; line-height: 1.75; }
+    .section-label { font-size: 11px; }
+    .section-title { font-size: 22px; }
+    .sub-head { font-size: 13.5px; color: var(--text-dark); }
+    .about-lead { font-size: 15px; }
+    .about-strong { font-size: 16px; }
+    .about-item-title { font-size: 12px; }
+    .about-item-desc { font-size: 14px; }
+    .brand-link-btn, .product-link-btn { font-size: 14px; padding: 12px 20px; min-height: 48px; }
+    .info-box-title, .key-msg-title { font-size: 12px; color: rgba(255,255,255,0.78); }
+    .info-row { font-size: 15px; margin-bottom: 12px; }
+    .info-key { font-size: 13px; min-width: 92px; color: rgba(255,255,255,0.75); }
+    .info-val small { font-size: 12.5px; color: rgba(255,255,255,0.78); }
+    .key-msg-badge { font-size: 11.5px; color: rgba(255,255,255,0.75); }
+    .key-msg-text { font-size: 15px; line-height: 1.75; }
+    .prod-option-head { font-size: 16px; }
+    .prod-option-items { font-size: 14.5px; }
+    .prod-option-desc { font-size: 14px; }
+    .brief-line { font-size: 21px; }
+    .must-item { font-size: 14.5px; line-height: 1.7; padding: 15px 16px; }
+    .must-icon { font-size: 17px; }
+    .concept-name, .fold-title { font-size: 15px; }
+    .concept-summary, .fold-summary { min-height: 54px; }
+    .concept-intro { font-size: 14.5px; }
+    .step-prod { font-size: 16px; }
+    .step-meta { font-size: 13px; }
+    .step-lead, .step-feat { font-size: 14px; }
+    .spec-key { font-size: 12px; }
+    .msg-item { font-size: 14.5px; line-height: 1.7; padding: 12px 14px; }
+    .angle-name { font-size: 14.5px; }
+    .angle-desc { font-size: 13.5px; }
+    .angle-num, .rule-num { font-size: 11px; }
+    .idea-name { font-size: 14.5px; }
+    .idea-desc { font-size: 14px; }
+    .idea-num { font-size: 12px; }
+    .ref-group-label { font-size: 12.5px; }
+    .ref-link { font-size: 14px; min-height: 48px; }
+    .ref-link span { font-size: 12px; }
+    .guard-title { font-size: 13px; }
+    .guard-item { font-size: 14px; }
+    .tl-name { font-size: 15px; }
+    .tl-when { font-size: 14px; }
+    .rule-title { font-size: 15px; }
+    .rule-sub { font-size: 13px; }
+    .rule-body { font-size: 14px; }
+    .hashtag-label { font-size: 13.5px; }
+    .hashtag { font-size: 14px; }
+    .copy-all-btn { font-size: 13.5px; }
+    .ref-note { font-size: 12.5px; line-height: 1.6; }
+    .warning-box { font-size: 14px; }
+    .form-label { font-size: 14.5px; }
+    .form-input, .form-textarea { font-size: 16px; } /* iOS 입력 시 자동 확대 방지 */
+    .line-opt-name { font-size: 15px; }
+    .line-opt-items { font-size: 13.5px; }
+    .note-box-title { font-size: 14.5px; }
+    .note-box ul { font-size: 14px; }
+    .agree-row { font-size: 14px; }
+    .agree-row input[type="checkbox"] { width: 20px; height: 20px; margin-top: 3px; }
+    .submit-btn { font-size: 16px; padding: 18px 20px; }
+    .settlement-lead, .settle-doc-text { font-size: 14.5px; }
+    .settle-tag-label { font-size: 13px; }
+    .settle-copy-box { font-size: 15px; }
+    .settle-copy-btn { font-size: 13px; padding: 10px 16px; min-height: 40px; }
+    .footer { font-size: 12.5px; }
+    .brief-label, .step-badge, .tl-dot { font-size: 11px; }
+    .fold-badge, .hashtag-label .required { font-size: 11px; padding: 2px 8px; }
+    .fold-count { font-size: 12px; }
+    .form-label .opt { font-size: 12.5px; }
+
+    /* ─────────────────────────────────────────────
+       ICONS — 이모지 대신 얇은 라인 아이콘
+       ───────────────────────────────────────────── */
+    .ic {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .sub-head { display: flex; align-items: center; gap: 10px; letter-spacing: 0.02em; }
+    .sub-head::before { content: ''; width: 18px; height: 1px; background: var(--gold); flex-shrink: 0; }
+    .sub-head-note { font-weight: 400; font-size: 12.5px; color: var(--text-light); }
+    .must-item { align-items: center; background: #FFFFFF; }
+    .must-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--cream);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0;
+      align-self: flex-start;
+    }
+    .angle-ico { background: var(--cream); border: 1px solid var(--border); color: var(--gold); }
+    .angle-ico .ic { width: 19px; height: 19px; }
+    .fold-icon { width: 30px; height: 30px; border-radius: 50%; background: var(--cream); border: 1px solid var(--border); color: var(--brand-text); }
+    .fold[open] .fold-icon { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+    .fold-icon .ic { width: 15px; height: 15px; }
+    .concept-chevron, .fold-chevron { width: 16px; height: 16px; color: var(--text-light); }
+    .copy-all-btn .ic { width: 15px; height: 15px; }
+    .note-box-title { display: flex; align-items: center; gap: 8px; }
+    .note-box-title .ic { width: 17px; height: 17px; color: var(--gold); }
+    .warning-box {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      background: #FBF8EF;
+      border: 1px solid #E6D9B4;
+      border-left: 3px solid var(--gold);
+      border-radius: 4px 12px 12px 4px;
+      color: #5E4F2A;
+    }
+    .warning-box strong { color: #3F3417; }
+    .warning-box .ic { color: var(--gold); margin-top: 3px; }
+    .guard-item::before { content: ''; width: 8px; height: 1px; background: currentColor; top: 50%; opacity: 0.6; }
+    .guard-item { padding-left: 18px; }
+    .guard-item::before { top: 1.05em; }
+
+    /* ─────────────────────────────────────────────
+       MOBILE
+       ───────────────────────────────────────────── */
+    @media (max-width: 480px) {
+      body { letter-spacing: -0.01em; }
+      .hero { padding: 44px 20px; min-height: 380px; }
+      .hero-wordmark { font-size: 44px; }
+      .hero-tagline { font-size: 16px; margin-bottom: 24px; }
+      .hero-title { font-size: 21px; }
+      .hero-eyebrow, .hero-sub { font-size: 10.5px; letter-spacing: 0.24em; }
+      .section { padding: 40px 20px; }
+      .section-title { font-size: 21px; }
+      .about-en { font-size: 22px; }
+      .info-box, .key-msg-box { padding: 20px 18px; }
+      .info-key { min-width: 84px; }
+      .brief-box { padding: 20px; }
+      .brief-line { font-size: 19px; }
+      .product-box { padding: 16px; }
+      .concept-body { padding: 4px 14px 18px; }
+      .fold-body { padding: 16px 14px; }
+      /* 촬영 컷: 2열 → 1열 가로형 카드 */
+      .angle-grid { grid-template-columns: 1fr; gap: 8px; }
+      .angle-item { display: grid; grid-template-columns: 40px 1fr; column-gap: 12px; align-items: start; padding: 14px; }
+      .angle-ico { grid-row: span 3; margin-bottom: 0; width: 40px; height: 40px; font-size: 18px; }
+      .angle-num { margin-bottom: 0; }
+      .angle-name { margin-bottom: 2px; }
+      .spec-grid { gap: 6px; }
+      .spec { padding: 12px 4px; }
+      .spec-val { font-size: 15px; }
+      .settle-copy-box { padding: 12px 14px; font-size: 14px; }
+      .footer { padding: 28px 20px; }
+    }
+    @media (max-width: 360px) {
+      .section { padding: 32px 16px; }
+      .info-row { flex-direction: column; gap: 0; }
+      .info-key { min-width: 0; }
+      .fold-summary, .concept-summary { padding-left: 12px; padding-right: 12px; }
+      .hashtag { font-size: 13px; padding: 9px 11px; }
+      .form-row-zip .zip-search-btn { padding: 0 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ICON SPRITE (라인 아이콘, Lucide 기반) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42Z"/><circle cx="7.5" cy="7.5" r=".6"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4Z"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+    <symbol id="i-frame" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7Z"/></symbol>
+    <symbol id="i-dine" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/></symbol>
+    <symbol id="i-hash" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  </defs>
+</svg>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-eyebrow">Influencer Guideline</div>
+  <div class="hero-wordmark">Lamantea</div>
+  <div class="hero-tagline">L'olio che natura crea</div>
+  <div class="hero-title">라만테아 가이드라인</div>
+  <div class="hero-sub">Lamantea × Creator Campaign</div>
+</header>
+
+<!-- ABOUT -->
+<section class="section">
+  <div class="section-label">About Brand</div>
+  <p class="about-lead">
+    <span class="about-en">Since 1950, Puglia</span>
+    <span class="about-en-sub">A family olive farm in Bisceglie, Italy</span>
+    <span class="about-strong">이탈리아 풀리아에서 대대로 이어온 가족 농장의 올리브오일</span>
+    Lamantea(라만테아)는 1950년부터 이탈리아 풀리아 주 비셸리에에서 대대로 이어온 가족 농장 브랜드입니다. 올리브 재배부터 수확, 착유, 패키징까지 전 공정을 직접 관리하며, 이탈리아 올리브오일 생산 1위 지역의 품질을 그대로 담았습니다.
+  </p>
+  <div class="about-grid">
+    <div class="about-item">
+      <div class="about-item-title">FROM GROVE TO BOTTLE</div>
+      <div class="about-item-desc">
+        <strong>재배부터 패키징까지, 전 공정 직접 관리</strong>
+        올리브 재배 · 수확 · 착유 · 패키징의 모든 과정을 가족 농장이 직접 책임집니다.
+      </div>
+    </div>
+    <div class="about-item">
+      <div class="about-item-title">PUGLIA, ITALY</div>
+      <div class="about-item-desc">
+        <strong>이탈리아 올리브오일 생산 1위 지역</strong>
+        이탈리아 올리브오일 생산 1위 지역, 풀리아의 품질을 그대로 담았습니다.
+      </div>
+    </div>
+    <div class="about-item">
+      <div class="about-item-title">PREMIUM, RECOGNIZED</div>
+      <div class="about-item-desc">
+        <strong>전국 롯데백화점 37개 지점 입점</strong>
+        한국에서는 국내 유일 단독 수입사를 통해 <span class="nb">네이버 스마트스토어</span>에서만 구매할 수 있습니다.
+      </div>
+    </div>
+  </div>
+  <a href="https://smartstore.naver.com/lamantea" target="_blank" rel="noopener" class="brand-link-btn">브랜드 스토어 바로가기 →</a>
+</section>
+
+<!-- CAMPAIGN INFO -->
+<section class="section">
+  <div class="section-label">Campaign Info</div>
+  <div class="section-title">캠페인 개요</div>
+
+  <div class="info-box">
+    <div class="info-box-title">Campaign Details</div>
+    <div class="info-row"><div class="info-key">형식</div><div class="info-val">인스타그램 릴스 1건 <span class="nb">(25초 이상)</span></div></div>
+    <div class="info-row"><div class="info-key">업로드 일정</div><div class="info-val"><strong>12월 1일 ~ 4일</strong></div></div>
+    <div class="info-divider"></div>
+    <div class="info-row"><div class="info-key">2차 활용</div><div class="info-val">동의</div></div>
+    <div class="info-row"><div class="info-key">파트너십 코드</div><div class="info-val"><strong>필수</strong></div></div>
+    <div class="info-row"><div class="info-key">업로드 유지</div><div class="info-val">3개월</div></div>
+  </div>
+
+  <div class="key-msg-box">
+    <div class="key-msg-title">캠페인 목적&nbsp;·&nbsp;<span class="nb">연말 선물 시즌</span></div>
+    <div class="key-msg-text" style="margin-top:-6px;margin-bottom:4px;">라만테아는 <strong>네이버 스마트스토어에서만</strong> 구매할 수 있는 이탈리아 프리미엄 올리브오일입니다.</div>
+    <div class="key-msg-item">
+      <div class="key-msg-badge">제품</div>
+      <div class="key-msg-text">프리미엄 올리브오일 선물세트 <span class="nb">— 연말·명절 선물용</span></div>
+    </div>
+    <div class="key-msg-item">
+      <div class="key-msg-badge">핵심 요청</div>
+      <div class="key-msg-text">연말·연초, <strong>소중한 사람들에게 마음을 전하기 좋은 프리미엄 선물세트</strong>로 자유롭게 표현해 주세요.</div>
+    </div>
+  </div>
+
+
+  <div class="sub-head" style="margin-top:0;">제공 제품</div>
+  <div class="product-box">
+    <img class="product-photo" src="../image/product.png" alt="라만테아 EVO 선물 패키지" loading="lazy">
+    <div class="prod-option">
+      <div class="prod-option-head">라만테아 EVO 선물 패키지 <span style="font-weight:500;color:var(--text-mid);">(1 set)</span></div>
+      <div class="prod-option-items"><span class="nb">500ml 병 1입</span> + <span class="nb">250ml 캔 2입</span></div>
+      <div class="prod-option-desc"><span>2025년 햇올리브로 만든 엑스트라버진 올리브오일, 빈티지 디자인 선물 패키지</span></div>
+    </div>
+    <a href="https://smartstore.naver.com/lamantea/products/13053086247" target="_blank" rel="noopener" class="product-link-btn">제품 보러가기 →</a>
+  </div>
+</section>
+
+<!-- CONTENT GUIDE -->
+<section class="section">
+  <div class="section-label">Content Guide</div>
+  <div class="section-title">제작 가이드</div>
+
+  <div class="brief-box">
+    <div class="brief-label">One-line Brief</div>
+    <div class="brief-line">올 연말, 사랑하는 사람들에게<br>마음을 전하는 <em>가장 센스 있는 방법</em></div>
+    <div class="brief-protocol">— Lamantea Gift Set</div>
+  </div>
+
+  <div class="sub-head">필수 포함 요소</div>
+  <div class="must-list">
+    <div class="must-item">
+      <div class="must-icon"><svg class="ic"><use href="#i-pen"/></svg></div>
+      <div><strong>[브랜드명]</strong> 브랜드명 <strong>라만테아(Lamantea)</strong>를 언급해 주세요.</div>
+    </div>
+    <div class="must-item">
+      <div class="must-icon"><svg class="ic"><use href="#i-link"/></svg></div>
+      <div><strong>[스토어 링크]</strong> <strong>네이버 스마트스토어 제품 링크 삽입 필수</strong>입니다.<br><a href="https://smartstore.naver.com/lamantea/products/13053086247" target="_blank" rel="noopener">smartstore.naver.com/lamantea/products/13053086247</a></div>
+    </div>
+    <div class="must-item">
+      <div class="must-icon"><svg class="ic"><use href="#i-tag"/></svg></div>
+      <div><strong>[캡션]</strong> 캡션에 <strong>#광고 또는 #협찬</strong> 중 1개 이상을 표기해 주세요. <span class="nb">(법적 의무)</span></div>
+    </div>
+    <div class="must-item">
+      <div class="must-icon"><svg class="ic"><use href="#i-eye"/></svg></div>
+      <div><strong>[사전 검토]</strong> 발행 전 <strong>최종본을 브랜드에 먼저 공유</strong>해 확인받아 주세요.</div>
+    </div>
+  </div>
+
+  <div class="sub-head">이렇게 담아주시면 좋아요 <span class="sub-head-note">권장</span></div>
+  <div class="must-list">
+    <div class="must-item">
+      <div class="must-icon"><svg class="ic"><use href="#i-video"/></svg></div>
+      <div>선물 패키지의 <strong>디자인과 구성</strong>(500ml 병 + 250ml 캔 2입)과 오일을 따르거나 요리에 쓰는 <strong>실제 사용 장면</strong>을 함께 보여주세요. 제품 특징은 아래 &lsquo;제품 상세&rsquo;를 참고해 정확하게 적어주세요.</div>
+    </div>
+  </div>
+
+  <div class="sub-head">상세 가이드 <span class="sub-head-note">항목을 탭하여 펼쳐보세요</span></div>
+  <div class="concept-list">
+
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">1</span>
+        <span class="concept-name">제품 상세&nbsp;·&nbsp;<span class="nb">EVO 라인</span></span>
+        <svg class="ic concept-chevron"><use href="#i-chev"/></svg>
+      </summary>
+      <div class="concept-body">
+        <div class="concept-intro">제품 특징을 <strong>정확한 수치</strong>로 확인하신 뒤 소개해 주세요.</div>
+        <div class="step-card" style="margin-top:14px;">
+          <div class="step-badge">GIFT SET&nbsp;·&nbsp;EVO LINE</div>
+          <div class="step-prod-en">Lamantea Extra Virgin Olive Oil</div>
+          <div class="step-prod">라만테아 EVO 선물 패키지</div>
+          <div class="step-meta">500ml 병 1입 + 250ml 캔 2입 / 1 set</div>
+
+          <div class="spec-grid">
+            <div class="spec"><div class="spec-val">0.2%↓</div><div class="spec-key">산도</div></div>
+            <div class="spec"><div class="spec-val">27°C↓</div><div class="spec-key">저온 냉압착</div></div>
+            <div class="spec"><div class="spec-val">2025</div><div class="spec-key">햇올리브</div></div>
+          </div>
+
+          <div class="step-lead">2025년 햇올리브를 사용한 엑스트라버진 올리브오일. 신선한 올리브의 향과 섬세한 맛이 특징입니다.</div>
+          <div class="step-feat"><strong>손상을 최소화한 수확</strong><span>수확 시 올리브 손상을 최소화하는 방식으로 채취합니다.</span></div>
+          <div class="step-feat"><strong>27°C 이하 저온 냉압착</strong><span>올리브 본연의 풍미와 영양을 그대로 보존합니다.</span></div>
+          <div class="step-feat"><strong>산도 0.2% 이하의 높은 품질</strong><span>산도 0.2% 이하의 높은 품질을 자랑합니다.</span></div>
+          <div class="step-feat"><strong>빈티지 디자인 패키지</strong><span>화려한 빈티지 디자인의 패키지로 선물용으로도 인기가 높습니다.</span></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">2</span>
+        <span class="concept-name">콘텐츠 방향&nbsp;·&nbsp;<span class="nb">핵심 메시지</span></span>
+        <svg class="ic concept-chevron"><use href="#i-chev"/></svg>
+      </summary>
+      <div class="concept-body">
+        <div class="concept-intro"><strong>연말·연초 프리미엄 선물세트</strong>로서 아래 메시지 중 채널에 맞는 포인트를 골라 자연스럽게 녹여주세요.</div>
+        <div class="msg-list">
+          <div class="msg-item">산도 0.2% 이하의 고품질 냉압착 최고급 올리브오일이면서, 주방에 두기만 해도 우리 집 주방을 갤러리로 만들어 주는 고품격 디자인 오브제 같은 패키지</div>
+          <div class="msg-item">받으면 괜스레 기분까지 좋아지는 고급스러운 패키지 디자인</div>
+          <div class="msg-item">전국 롯데백화점 37개 지점에 입점해 품질을 인정받은 이탈리아 프리미엄 올리브오일 브랜드</div>
+          <div class="msg-item closing">라만테아 선물세트로 올 연말, 사랑하는 사람들에게 마음을 전하는 가장 센스 있는 방법.</div>
+        </div>
+      </div>
+    </details>
+
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">3</span>
+        <span class="concept-name">촬영 가이드&nbsp;·&nbsp;<span class="nb">추천 컷 4</span></span>
+        <svg class="ic concept-chevron"><use href="#i-chev"/></svg>
+      </summary>
+      <div class="concept-body">
+        <div class="concept-intro">아래 컷을 참고해 <strong>선물 · 오브제 · 실사용</strong>이 모두 보이도록 구성해 주세요.</div>
+        <div class="angle-grid" style="margin-top:14px;">
+          <div class="angle-item">
+            <div class="angle-ico"><svg class="ic"><use href="#i-gift"/></svg></div>
+            <div class="angle-num">CUT 1</div>
+            <div class="angle-name">언박싱 컷</div>
+            <div class="angle-desc">선물 박스를 열어 병 1입 + 캔 2입 구성이 한눈에 보이도록 담아주세요.</div>
+          </div>
+          <div class="angle-item">
+            <div class="angle-ico"><svg class="ic"><use href="#i-frame"/></svg></div>
+            <div class="angle-num">CUT 2</div>
+            <div class="angle-name">오브제 컷</div>
+            <div class="angle-desc">주방·다이닝 공간에 놓아 빈티지 패키지가 인테리어 오브제처럼 보이게 연출해 주세요.</div>
+          </div>
+          <div class="angle-item">
+            <div class="angle-ico"><svg class="ic"><use href="#i-drop"/></svg></div>
+            <div class="angle-num">CUT 3</div>
+            <div class="angle-name">푸어링 컷</div>
+            <div class="angle-desc">오일을 따르는 순간을 근접 촬영해 맑은 색감과 질감을 보여주세요.</div>
+          </div>
+          <div class="angle-item">
+            <div class="angle-ico"><svg class="ic"><use href="#i-dine"/></svg></div>
+            <div class="angle-num">CUT 4</div>
+            <div class="angle-name">테이블 · 선물 컷</div>
+            <div class="angle-desc">요리·플레이팅에 활용하거나, 소중한 사람에게 건네는 장면으로 마무리해 주세요.</div>
+          </div>
+        </div>
+        <div class="ref-note" style="margin-top:12px;">&bull; 위 컷 구성은 <strong>참고용</strong>입니다. 채널 톤에 맞게 자유롭게 연출해 주세요.</div>
+      </div>
+    </details>
+
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">4</span>
+        <span class="concept-name">콘텐츠 소재 참고&nbsp;·&nbsp;<span class="nb">아이디어 5</span></span>
+        <svg class="ic concept-chevron"><use href="#i-chev"/></svg>
+      </summary>
+      <div class="concept-body">
+        <div class="concept-intro"><strong>연말 선물 시즌</strong>과 리빙·F&amp;B 채널 톤을 바탕으로 한 참고 아이디어입니다.</div>
+        <div style="margin-top:12px;">
+          <div class="idea-item"><div class="idea-num">01</div><div><div class="idea-name">연말 선물 언박싱</div><div class="idea-desc">고급스러운 패키지를 여는 순간의 설렘과 구성 소개로 &lsquo;받고 싶은 선물&rsquo; 무드를 전달</div></div></div>
+          <div class="idea-item"><div class="idea-num">02</div><div><div class="idea-name">주방이 갤러리가 되는 오브제</div><div class="idea-desc">빈티지 패턴 병·캔을 주방 선반이나 다이닝 테이블에 스타일링하는 홈 인테리어 콘텐츠</div></div></div>
+          <div class="idea-item"><div class="idea-num">03</div><div><div class="idea-name">연말 홈파티 테이블</div><div class="idea-desc">샐러드·카프레제·빵 디핑 등 올리브오일로 완성하는 연말 홈파티 한 상</div></div></div>
+          <div class="idea-item"><div class="idea-num">04</div><div><div class="idea-name">간단 레시피 &amp; 베이킹</div><div class="idea-desc">엑스트라버진 올리브오일의 풍미를 살린 간단 요리나 올리브오일 베이킹</div></div></div>
+          <div class="idea-item"><div class="idea-num">05</div><div><div class="idea-name">센스 있는 선물 추천</div><div class="idea-desc">부모님·시댁·지인 연말 선물 고민을 해결하는 추천형 콘텐츠</div></div></div>
+        </div>
+        <div class="ref-note" style="margin-top:14px;">&bull; 필수 연출안이 아닌 <strong>소재 참고용</strong>입니다. 채널의 톤과 방식에 맞게 자유롭게 재해석해 주세요.</div>
+      </div>
+    </details>
+
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">5</span>
+        <span class="concept-name">레퍼런스&nbsp;·&nbsp;<span class="nb">참고 계정</span></span>
+        <svg class="ic concept-chevron"><use href="#i-chev"/></svg>
+      </summary>
+      <div class="concept-body">
+        <div class="concept-intro">브랜드가 기대하는 <strong>무드와 콘텐츠 감도</strong>를 참고해 주세요.</div>
+        <div class="ref-group-label">희망 레퍼런스</div>
+        <a class="ref-link" href="https://www.instagram.com/chaezip.home/reels/" target="_blank" rel="noopener">@chaezip.home<span>리빙</span></a>
+        <a class="ref-link" href="https://www.instagram.com/_chocohomee_/reels/" target="_blank" rel="noopener">@_chocohomee_<span>리빙</span></a>
+        <a class="ref-link" href="https://www.instagram.com/by.soyul/reels/" target="_blank" rel="noopener">@by.soyul<span>리빙</span></a>
+        <a class="ref-link" href="https://www.instagram.com/good_use_zip/reels/" target="_blank" rel="noopener">@good_use_zip<span>리빙</span></a>
+        <div class="ref-group-label">카테고리별 레퍼런스</div>
+        <a class="ref-link" href="https://www.instagram.com/802bakery/reels/" target="_blank" rel="noopener">@802bakery<span>베이킹</span></a>
+        <a class="ref-link" href="https://www.instagram.com/dachae.home/reels/" target="_blank" rel="noopener">@dachae.home<span>리빙</span></a>
+        <a class="ref-link" href="https://www.instagram.com/poppyhome_a/" target="_blank" rel="noopener">@poppyhome_a<span>리빙 / F&amp;B</span></a>
+        <div class="ref-note" style="margin-top:10px;">&bull; 참고용이며, 동일한 연출을 따라 하실 필요는 없습니다.</div>
+      </div>
+    </details>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="fold-group">
+    <details class="fold">
+      <summary class="fold-summary">
+        <span class="fold-icon"><svg class="ic"><use href="#i-scale"/></svg></span>
+        <span class="fold-title">콘텐츠 가드레일</span>
+        <span class="fold-count">Must&nbsp;/&nbsp;Avoid</span>
+        <svg class="ic fold-chevron"><use href="#i-chev"/></svg>
+      </summary>
+      <div class="fold-body">
+        <div class="guard-grid">
+          <div class="guard-box must">
+            <div class="guard-title">Must Include</div>
+            <div class="guard-item">브랜드명 라만테아(Lamantea) 언급</div>
+            <div class="guard-item">네이버 스마트스토어 링크 삽입</div>
+            <div class="guard-item">#광고 또는 #협찬 표기</div>
+            <div class="guard-item">발행 전 최종본 브랜드 확인</div>
+          </div>
+          <div class="guard-box avoid">
+            <div class="guard-title">Avoid</div>
+            <div class="guard-item">질병 예방·치료 등 의약품으로 오인될 수 있는 건강 효능 표현</div>
+            <div class="guard-item">확인되지 않은 수치·인증·수상 내용</div>
+            <div class="guard-item">타 브랜드 비방 또는 비교 단정</div>
+            <div class="guard-item">가격·할인·프로모션 임의 언급</div>
+            <div class="guard-item">상업적 음원 등 제3자 저작권 침해 요소</div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="fold">
+      <summary class="fold-summary">
+        <span class="fold-icon"><svg class="ic"><use href="#i-cal"/></svg></span>
+        <span class="fold-title">제출 · 발행 일정</span>
+        <span class="fold-count">4단계</span>
+        <svg class="ic fold-chevron"><use href="#i-chev"/></svg>
+      </summary>
+      <div class="fold-body">
+        <ol class="timeline">
+          <li class="tl-item"><span class="tl-dot">1</span><div><div class="tl-name">제품 발송</div><div class="tl-when">가이드 제공 후 3일 이내</div></div></li>
+          <li class="tl-item"><span class="tl-dot">2</span><div><div class="tl-name">초안 제출</div><div class="tl-when">제품 수령 후 7일 이내</div></div></li>
+          <li class="tl-item"><span class="tl-dot">3</span><div><div class="tl-name">피드백 전달</div><div class="tl-when">초안 수령 후 3일 이내</div></div></li>
+          <li class="tl-item final"><span class="tl-dot">4</span><div><div class="tl-name">최종 발행</div><div class="tl-when"><strong style="color:var(--brand-text);">12월 1일 ~ 4일</strong></div></div></li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="fold">
+      <summary class="fold-summary">
+        <span class="fold-icon"><svg class="ic"><use href="#i-list"/></svg></span>
+        <span class="fold-title">진행 규정</span>
+        <span class="fold-count">3</span>
+        <svg class="ic fold-chevron"><use href="#i-chev"/></svg>
+      </summary>
+      <div class="fold-body">
+        <div class="rule-grid">
+          <div class="rule-card">
+            <div class="rule-num">01</div>
+            <div class="rule-title">브랜디드 콘텐츠 업로드</div>
+            <div class="rule-sub">브랜드 SNS 재게시 동의 필수</div>
+            <div class="rule-body">
+              <p>인스타그램 <strong>브랜디드 콘텐츠(유료 파트너십)</strong> 표시를 설정해 업로드해 주세요.</p>
+              <p>업로드된 콘텐츠는 브랜드 SNS에 재게시될 수 있습니다. 광고 소재 활용 및 활용 기간은 별도 협의합니다.</p>
+            </div>
+          </div>
+          <div class="rule-card">
+            <div class="rule-num">02</div>
+            <div class="rule-title">사전 검토 &amp; 인사이트 공유</div>
+            <div class="rule-sub">발행 전 최종본 확인 · 발행 후 인사이트 공유</div>
+            <div class="rule-body">
+              <p>발행 전 <strong>최종본을 브랜드에 공유</strong>해 확인받은 뒤 업로드해 주세요.</p>
+              <p>발행 후에는 <strong>인사이트(조회수, 좋아요 등)</strong> 캡처를 공유해 주세요.</p>
+            </div>
+          </div>
+          <div class="rule-card">
+            <div class="rule-num">03</div>
+            <div class="rule-title">음원 사용 규정 <span style="font-size:11px;font-weight:500;color:var(--text-light);">(공통 권장)</span></div>
+            <div class="rule-sub">상업적 음원 사용 불가</div>
+            <div class="rule-body">
+              <p>유료 음원, 인기 차트곡 등 저작권 이슈가 있을 수 있는 음원은 사용할 수 없습니다.</p>
+              <p>플랫폼 제공 <strong>&lsquo;오리지널 사운드&rsquo;</strong> 또는 사용권이 확보된 음원만 사용해 주세요.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="fold">
+      <summary class="fold-summary">
+        <span class="fold-icon"><svg class="ic"><use href="#i-hash"/></svg></span>
+        <span class="fold-title">해시태그</span>
+        <span class="fold-badge">필수</span>
+        <svg class="ic fold-chevron"><use href="#i-chev"/></svg>
+      </summary>
+      <div class="fold-body">
+        <div class="hashtag-label">광고 표기 <span class="required">택 1 이상</span></div>
+        <div class="hashtag-wrap">
+          <div class="hashtag ad">#광고</div>
+          <div class="hashtag ad">#협찬</div>
+        </div>
+        <div class="hashtag-label">브랜드 해시태그 <span class="required">필수</span></div>
+        <button type="button" class="copy-all-btn" onclick="copyAllTags()"><svg class="ic"><use href="#i-copy"/></svg> 브랜드 해시태그 전체 복사</button>
+        <div class="hashtag-wrap" id="brandTags">
+          <div class="hashtag">#라만테아</div>
+          <div class="hashtag">#Lamantea</div>
+          <div class="hashtag">#올리브오일</div>
+          <div class="hashtag">#올리브오일선물세트</div>
+          <div class="hashtag">#프리미엄선물세트</div>
+          <div class="hashtag">#연말선물</div>
+          <div class="hashtag">#새해선물</div>
+          <div class="hashtag">#선물추천</div>
+          <div class="hashtag">#저산도올리브오일</div>
+          <div class="hashtag">#이탈리아올리브오일</div>
+          <div class="hashtag">#롯데백화점</div>
+        </div>
+        <div class="ref-note">&bull; 태그를 탭하면 하나씩 복사됩니다. 협의된 개별 해시태그가 있다면 함께 추가해 주세요.</div>
+      </div>
+    </details>
+  </div>
+
+  <div class="warning-box">
+    <svg class="ic"><use href="#i-alert"/></svg><span>캠페인 참여 시 <span class="nb">브랜디드 콘텐츠 업로드</span> 및 <span class="nb">브랜드 SNS 재게시</span>에 동의하는 것으로 간주됩니다.</span>
+  </div>
+</section>
+
+<!-- APPLICATION -->
+<section class="section">
+  <div class="section-label">Application</div>
+  <div class="section-title">캠페인 신청</div>
+
+  <form id="applicationForm" onsubmit="return submitApplication(event)">
+    <div class="form-group">
+      <label class="form-label">제공 제품</label>
+      <input type="hidden" name="productLine" value="라만테아 EVO 선물 패키지 (500ml 병 1 + 250ml 캔 2)">
+      <div class="line-opt">
+        <img src="../image/product.png" alt="">
+        <span>
+          <span class="line-opt-name">라만테아 EVO 선물 패키지</span>
+          <span class="line-opt-items"><span class="nb">500ml 병 1입</span> + <span class="nb">250ml 캔 2입</span> (1 set)</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appName">이름<span class="req">*</span></label>
+      <input type="text" id="appName" name="name" class="form-input" placeholder="홍길동" autocomplete="name" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appInstagram">인스타그램 링크<span class="req">*</span></label>
+      <input type="text" id="appInstagram" name="instagram" class="form-input" placeholder="@아이디 또는 프로필 링크" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appPhone">휴대폰<span class="req">*</span></label>
+      <input type="tel" id="appPhone" name="phone" class="form-input" placeholder="010-0000-0000" inputmode="numeric" pattern="[0-9\-]*" autocomplete="tel" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appEmail">이메일<span class="opt">(선택)</span></label>
+      <input type="email" id="appEmail" name="email" class="form-input" placeholder="name@email.com" autocomplete="email">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appZip">우편번호<span class="req">*</span></label>
+      <div class="form-row-zip">
+        <input type="text" id="appZip" name="zipcode" class="form-input" placeholder="00000" inputmode="numeric" maxlength="5" readonly required>
+        <button type="button" class="zip-search-btn" onclick="searchAddress()">주소 검색</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appRoadAddress">배송지 주소<span class="req">*</span></label>
+      <input type="text" id="appRoadAddress" name="roadAddress" class="form-input" placeholder="도로명 주소" readonly required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appDetailAddress">상세 주소<span class="req">*</span></label>
+      <input type="text" id="appDetailAddress" name="detailAddress" class="form-input" placeholder="동·호수 등" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appNote">어떤 스타일로 제작하고 싶으신가요?<span class="opt">(선택)</span></label>
+      <textarea id="appNote" name="note" class="form-textarea" placeholder="예) 연말 홈파티 테이블 세팅, 선물 언박싱, 간단 레시피·플레이팅 등 생각하고 계신 콘셉트를 자유롭게 적어주세요"></textarea>
+    </div>
+
+    <input type="hidden" id="appFullAddress" name="fullAddress">
+
+    <div class="warning-box">
+      <svg class="ic"><use href="#i-alert"/></svg><span><strong>배송지는 매 캠페인마다 새로 확인합니다.</strong><br>
+      오배송 방지를 위해 입력값을 다시 한번 체크해 주세요.</span>
+    </div>
+
+    <div class="note-box" style="margin-top:16px;">
+      <div class="note-box-title"><svg class="ic"><use href="#i-info"/></svg>정산 안내</div>
+      <ul>
+        <li>정산 자료 제출 후 <strong>2주</strong> 이내 지급됩니다.</li>
+      </ul>
+    </div>
+
+    <div class="note-box">
+      <div class="note-box-title"><svg class="ic"><use href="#i-info"/></svg>콘텐츠 활용 안내</div>
+      <ul>
+        <li>콘텐츠는 브랜디드 콘텐츠로 업로드되며, 브랜드 SNS에 재게시될 수 있습니다.</li>
+        <li>광고 소재 활용 및 활용 기간은 별도 협의 후 진행됩니다.</li>
+      </ul>
+    </div>
+
+    <div class="agree-list">
+      <label class="agree-row">
+        <input type="checkbox" name="agreeGuide" required>
+        <span><strong>[필수]</strong> 안내된 가이드라인 및 진행 조건을 확인했으며 이에 동의합니다.</span>
+      </label>
+      <label class="agree-row">
+        <input type="checkbox" name="agreeReuse" required>
+        <span><strong>[필수]</strong> 제작된 콘텐츠의 브랜디드 콘텐츠 업로드 및 브랜드·SIRIAI SNS 재게시에 동의합니다.</span>
+      </label>
+      <label class="agree-row">
+        <input type="checkbox" name="agreeSchedule" required>
+        <span><strong>[필수]</strong> 초안 제출·사전 검토 일정과 <span class="nb">12월 1일 ~ 4일 업로드</span> 일정을 준수합니다.</span>
+      </label>
+      <label class="agree-row">
+        <input type="checkbox" name="agreeCancel" required>
+        <span><strong>[필수]</strong> 캠페인 선정 후 개인 변심 및 일방적인 취소는 불가하며, 취소 시 <strong>제공된 제품 비용이 발생할 수 있음</strong>에 동의합니다.</span>
+      </label>
+    </div>
+
+    <button type="submit" class="submit-btn">라만테아 캠페인 지원서 제출하기</button>
+  </form>
+</section>
+
+<!-- SETTLEMENT -->
+<section class="section">
+  <div class="section-label">Settlement</div>
+  <div class="section-title">정산</div>
+  <div class="settlement-lead">캠페인 선정 완료 후 정산을 위한 서류 및 연락처를 누락 없이 제출해 주세요.<br>정산은 <strong>정산 자료 제출 후 2주</strong> 이내 지급됩니다.</div>
+
+  <div class="settle-tag-label">제출 서류</div>
+  <div class="settle-doc-text">— 성함, 연락처, 신분증 사본 (뒷자리 포함), 통장 사본</div>
+
+  <div class="settle-tag-label">수신 이메일</div>
+  <div class="settle-copy-box">
+    <span>hwangyksiriai@gmail.com</span>
+    <button type="button" class="settle-copy-btn" onclick="copyText('hwangyksiriai@gmail.com')">복사</button>
+  </div>
+
+  <div class="settle-tag-label">메일 제목</div>
+  <div class="settle-copy-box">
+    <span>라만테아 _이름_@인스타핸들</span>
+    <button type="button" class="settle-copy-btn" onclick="copyText('라만테아 _이름_@인스타핸들')">복사</button>
+  </div>
+
+  <div class="warning-box">
+    <svg class="ic"><use href="#i-alert"/></svg><span>정산 자료는 브랜드로부터 확인 안내를 받은 인플루언서에 한해서 제출해 주세요.<br>
+    확정 안내를 받지 못한 경우 서류를 제출하지 마세요.</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-mark">Lamantea</div>
+  <div class="footer-tag">L'olio che natura crea</div>
+  본 가이드라인은 선별된 크리에이터에게만 제공되는 자료입니다.
+</footer>
+
+<div class="copy-toast" id="copyToast"></div>
+
+<script src="https://t1.kakaocdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+  function showToast(text) {
+    const toast = document.getElementById('copyToast');
+    toast.textContent = text;
+    toast.classList.add('show');
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => toast.classList.remove('show'), 1600);
+  }
+  function showCopyToast(text) { showToast('"' + text + '" 복사됨'); }
+
+  function copyText(text, toastText) {
+    const done = () => toastText ? showToast(toastText) : showCopyToast(text);
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+    } else {
+      fallbackCopy(text, done);
+    }
+  }
+  function fallbackCopy(text, done) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (e) { showToast('복사에 실패했습니다'); }
+    document.body.removeChild(ta);
+  }
+
+  document.querySelectorAll('.hashtag').forEach(el => {
+    el.addEventListener('click', () => copyText(el.textContent.trim()));
+  });
+
+  function copyAllTags() {
+    const tags = [...document.querySelectorAll('#brandTags .hashtag')].map(el => el.textContent.trim()).join(' ');
+    copyText(tags, '브랜드 해시태그 11개 복사됨');
+  }
+
+  // 주소 검색 (다음 우편번호 서비스)
+  function searchAddress() {
+    if (typeof daum === 'undefined' || !daum.Postcode) {
+      showToast('주소 검색을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
+      return;
+    }
+    new daum.Postcode({
+      oncomplete: function(data) {
+        document.getElementById('appZip').value = data.zonecode;
+        document.getElementById('appRoadAddress').value = data.roadAddress || data.address;
+        updateFullAddress();
+        document.getElementById('appDetailAddress').focus();
+      }
+    }).open();
+  }
+
+  // 배송지 주소 + 상세 주소 → hidden 필드 하나로 합침
+  function updateFullAddress() {
+    const road = document.getElementById('appRoadAddress').value.trim();
+    const detail = document.getElementById('appDetailAddress').value.trim();
+    document.getElementById('appFullAddress').value = [road, detail].filter(Boolean).join(' ');
+  }
+  const appDetailAddressEl = document.getElementById('appDetailAddress');
+  if (appDetailAddressEl) appDetailAddressEl.addEventListener('input', updateFullAddress);
+
+  // 인스타그램 입력값을 https://instagram.com/handle 형태로 정규화
+  function normalizeInstagramLink(value) {
+    let v = (value || '').trim();
+    if (!v) return '';
+    if (/^https?:\/\//i.test(v)) return v;
+    v = v.replace(/^@/, '').replace(/^(www\.)?instagram\.com\//i, '').replace(/^\/+/, '').replace(/\/+$/, '');
+    return 'https://instagram.com/' + v;
+  }
+  const appInstagramEl = document.getElementById('appInstagram');
+  if (appInstagramEl) appInstagramEl.addEventListener('blur', () => {
+    if (appInstagramEl.value.trim()) appInstagramEl.value = normalizeInstagramLink(appInstagramEl.value);
+  });
+
+  // ─────────────────────────────────────────────
+  // 구글시트 연동 설정
+  // Apps Script 웹 앱 배포 후 발급되는 URL을 아래에 붙여넣으면 바로 연동됩니다.
+  // (미설정 상태에서는 제출 시 안내 토스트만 뜨고 데이터는 콘솔에만 출력됩니다)
+  // ─────────────────────────────────────────────
+  const GAS_WEB_APP_URL = 'YOUR_WEB_APP_URL';
+  const APP_CAMPAIGN = '라만테아';
+  // 고료 구분값 — 페이지마다 다르며, 구글시트에서 고료별로 구분하는 데 사용 (화면에는 표시되지 않음)
+  const APP_PRICE = '5만원';
+  const SUBMIT_LABEL = '라만테아 캠페인 지원서 제출하기';
+
+  // 우편번호·휴대폰은 앞자리 0 보존을 위해 항상 문자열로 전달
+  function submitApplication(e) {
+    e.preventDefault();
+    updateFullAddress();
+
+    const form = document.getElementById('applicationForm');
+    const data = {
+      campaign: APP_CAMPAIGN,
+      price: APP_PRICE,
+      productLine: form.productLine.value.trim(),
+      name: form.name.value.trim(),
+      instagram: normalizeInstagramLink(form.instagram.value),
+      phone: String(form.phone.value.trim()),
+      email: form.email.value.trim(),
+      zipcode: String(form.zipcode.value.trim()),
+      address: form.fullAddress.value,
+      note: form.note.value.trim(),
+      submittedAt: new Date().toISOString()
+    };
+
+    if (!GAS_WEB_APP_URL || GAS_WEB_APP_URL.indexOf('YOUR_WEB_APP_URL') !== -1) {
+      console.log('캠페인 신청 데이터', data);
+      showToast('구글시트 연동 URL이 설정되지 않았습니다');
+      return false;
+    }
+
+    const submitBtn = form.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = '제출 중...';
+
+    fetch(GAS_WEB_APP_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(data)
+    }).then(() => {
+      showToast('제출이 완료되었습니다');
+      form.reset();
+      document.getElementById('appFullAddress').value = '';
+    }).catch(() => {
+      showToast('제출 중 오류가 발생했습니다. 다시 시도해 주세요.');
+    }).finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = SUBMIT_LABEL;
+    });
+
+    return false;
+  }
+</script>
+</body>
+</html>
