@@ -1051,6 +1051,53 @@
       .hashtag { font-size: 13px; padding: 9px 11px; }
       .form-row-zip .zip-search-btn { padding: 0 14px; }
     }
+    /* SUBMIT DONE MODAL */
+    .done-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      background: rgba(38,38,30,0.55);
+    }
+    .done-modal.show { display: flex; }
+    .done-card {
+      width: 100%;
+      max-width: 340px;
+      background: var(--cream);
+      border-radius: 18px;
+      padding: 32px 24px 22px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+    .done-ico {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .done-ico .ic { width: 24px; height: 24px; stroke-width: 2; }
+    .done-title { font-size: 18px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+    .done-msg { font-size: 14.5px; color: var(--text-mid); line-height: 1.7; margin-bottom: 22px; }
+    .done-btn {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background: var(--brand-deep);
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -1594,6 +1641,15 @@
   본 가이드라인은 선별된 크리에이터에게만 제공되는 자료입니다.
 </footer>
 
+<div class="done-modal" id="doneModal" role="dialog" aria-modal="true" aria-labelledby="doneTitle">
+  <div class="done-card">
+    <div class="done-ico"><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <div class="done-title" id="doneTitle">제출이 완료되었습니다</div>
+    <div class="done-msg">브랜드 컨펌 후<br>개별적으로 안내드리겠습니다.</div>
+    <button type="button" class="done-btn" onclick="closeDone()">확인</button>
+  </div>
+</div>
+
 <div class="copy-toast" id="copyToast"></div>
 
 <script src="https://t1.kakaocdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -1720,7 +1776,7 @@
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(data)
     }).then(() => {
-      showToast('제출이 완료되었습니다');
+      showDone();
       form.reset();
       document.getElementById('appFullAddress').value = '';
     }).catch(() => {
@@ -1732,6 +1788,17 @@
 
     return false;
   }
+  function showDone() {
+    const m = document.getElementById('doneModal');
+    m.classList.add('show');
+    m.querySelector('.done-btn').focus();
+  }
+  function closeDone() {
+    document.getElementById('doneModal').classList.remove('show');
+  }
+  document.getElementById('doneModal').addEventListener('click', (e) => {
+    if (e.target.id === 'doneModal') closeDone();
+  });
 </script>
 </body>
 </html>
